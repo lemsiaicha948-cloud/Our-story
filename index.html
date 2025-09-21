@@ -66,6 +66,7 @@
   .heart { fill: #ff69b4; stroke: none; }
   .speech-bubble { fill: #ffffff; stroke: #555; stroke-width: 1; }
   .speech-text { font-family: 'Comic Sans MS', cursive; font-size: 14px; fill: #333; }
+  .leg { fill: #ffdbac; } /* Skin tone for legs */
 
   /* --- Scene 1: Long Distance --- */
   .scene1-bg-left { fill: #a3e4d7; }
@@ -94,6 +95,7 @@
   .angry-text-bubble { font-family: 'Arial Black', sans-serif; font-size: 16px; fill: #ff0000; }
   .argument-line { stroke: #ff0000; stroke-width: 3; stroke-dasharray: 2, 2; }
   .speech-bubble-angry { fill: #ffe0e0; stroke: #ff0000; stroke-width: 1; }
+  .argument-heart { fill: #ff0000; }
 
   /* --- Scene 4: Happily Ever After --- */
   .scene4-bg { fill: #d4edda; }
@@ -111,7 +113,7 @@
   @keyframes pulse { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.1); opacity: 1; } }
   @keyframes flash { from { opacity: 0.7; } to { opacity: 1; } }
   @keyframes sparkle { 0% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } 100% { opacity: 0.5; transform: scale(1); } }
-
+  
 </style>
 </head>
 <body>
@@ -145,32 +147,39 @@
       <circle cx="450" cy="30" r="8" class="star" />
       <circle cx="440" cy="50" r="5" class="star" />
       
-      <line x1="300" y1="180" x2="500" y2="180" class="connection-line" />
-      <path class="connection-heart" d="M390,180 Q380,160 360,180 T390,200 Z M390,180 Q400,160 420,180 T390,200 Z" transform="scale(0.8) translate(10,0)" />
+      <path d="M400,180 C390,160 370,160 360,180 C350,200 390,240 400,260 C410,240 450,200 440,180 C430,160 410,160 400,180" class="connection-heart" transform="scale(0.5) translate(400, -100)"/>
       
-      <g transform="translate(200, 130)">
-        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
+      <g transform="translate(200, 150)">
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="-10" cy="-5" r="3" class="eye" />
         <circle cx="10" cy="-5" r="3" class="eye" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <rect x="-25" y="30" width="50" height="60" class="character-body-chacha" />
-        <line x1="25" y1="40" x2="60" y2="80" class="character-arm-leg" stroke="#ffb6c1" />
-        <rect x="55" y="70" width="20" height="30" rx="3" ry="3" fill="#333" />
-        <text x="-30" y="190" class="character-text">Chacha</text>
+        <rect x="-15" y="90" width="10" height="40" class="leg" />
+        <rect x="5" y="90" width="10" height="40" class="leg" />
+        <rect x="55" y="60" width="20" height="30" rx="3" ry="3" fill="#333" />
+        <line x1="25" y1="40" x2="60" y2="70" class="character-arm-leg" stroke="#ffb6c1" />
+        <text x="-30" y="150" class="character-text">Chacha</text>
       </g>
-      <g transform="translate(600, 130)">
-        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
+      
+      <g transform="translate(600, 150)">
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <circle cx="-10" cy="-5" r="3" class="eye" />
         <circle cx="10" cy="-5" r="3" class="eye" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <rect x="-25" y="30" width="50" height="70" class="character-body-skandourti" />
-        <line x1="-25" y1="40" x2="-60" y2="80" class="character-arm-leg" stroke="#87ceeb" />
-        <rect x="-75" y="70" width="20" height="30" rx="3" ry="3" fill="#333" />
-        <text x="-40" y="190" class="character-text">Skandourti</text>
+        <rect x="-15" y="100" width="10" height="40" class="leg" />
+        <rect x="5" y="100" width="10" height="40" class="leg" />
+        <rect x="-75" y="60" width="20" height="30" rx="3" ry="3" fill="#333" />
+        <line x1="-25" y1="40" x2="-60" y2="70" class="character-arm-leg" stroke="#87ceeb" />
+        <text x="-40" y="160" class="character-text">Skandourti</text>
       </g>
-      <text x="400" y="30" class="text-overlay" font-size="1.5em" fill="#333">Connected by Love</text>
+
+      <line x1="300" y1="180" x2="500" y2="180" class="connection-line" />
+      <path class="connection-heart" d="M390,180 Q380,160 360,180 T390,200 Z M390,180 Q400,160 420,180 T390,200 Z" transform="scale(0.8) translate(10,0)" />
+      
     </svg>
 
     <h2>2. After 4 Months: The Sweetest Reunion</h2>
@@ -182,32 +191,36 @@
       <rect x="0" y="0" width="800" height="400" class="scene2-bg" />
       <text x="400" y="50" class="text-overlay">After 4 months...</text>
       
-      <g transform="translate(350, 130)">
-        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
+      <g transform="translate(350, 150)">
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="-10" cy="-5" r="3" class="eye" />
         <circle cx="10" cy="-5" r="3" class="eye" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <rect x="-25" y="30" width="50" height="60" class="character-body-chacha" />
-        <line x1="25" y1="40" x2="60" y2="100" class="hug-arms-chacha" />
-        <line x1="-25" y1="40" x2="-60" y2="100" class="hug-arms-chacha" />
-        <text x="-15" y="170" class="character-text">Chacha</text>
+        <rect x="-15" y="90" width="10" height="40" class="leg" />
+        <rect x="5" y="90" width="10" height="40" class="leg" />
+        <text x="-15" y="150" class="character-text">Chacha</text>
       </g>
-      <g transform="translate(450, 130)">
-        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
+      
+      <g transform="translate(450, 150)">
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <circle cx="-10" cy="-5" r="3" class="eye" />
         <circle cx="10" cy="-5" r="3" class="eye" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <rect x="-25" y="30" width="50" height="70" class="character-body-skandourti" />
-        <line x1="-25" y1="40" x2="-60" y2="100" class="hug-arms-skandourti" />
-        <line x1="25" y1="40" x2="60" y2="100" class="hug-arms-skandourti" />
-        <text x="-40" y="170" class="character-text">Skandourti</text>
+        <rect x="-15" y="100" width="10" height="40" class="leg" />
+        <rect x="5" y="100" width="10" height="40" class="leg" />
+        <text x="-40" y="160" class="character-text">Skandourti</text>
       </g>
       
-      <path class="heart" d="M400,210 Q380,160 350,210 T400,260 Z M400,210 Q420,160 450,210 T400,260 Z" transform="scale(1.2)" />
+      <path class="heart" d="M400,210 C380,160 350,160 330,210 C310,260 380,310 400,330 C420,310 490,260 470,210 C450,160 420,160 400,210" transform="scale(0.8) translate(50, -20)"/>
+      <path class="heart" d="M400,210 C380,160 350,160 330,210 C310,260 380,310 400,330 C420,310 490,260 470,210 C450,160 420,160 400,210" transform="scale(0.8) translate(-50, -20)"/>
       
-      <text x="400" y="350" class="scene-description" font-style="italic">"Finally together!"</text>
+      <line x1="375" y1="200" x2="425" y2="200" class="hug-arms-skandourti" />
+      <line x1="425" y1="200" x2="375" y2="200" class="hug-arms-chacha" />
+      
     </svg>
 
     <h2>3. The Storm: Overcoming Challenges</h2>
@@ -224,28 +237,32 @@
       <path d="M650,100 L680,150 L660,150 L690,200 L660,200 L680,250" class="lightning-bolt" />
       
       <g transform="translate(300, 180)">
-        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <path d="M-15,10 Q0,-5 15,10" class="angry-frown" />
         <line x1="-20" y1="-5" x2="-10" y2="-15" stroke="#333" stroke-width="2" />
         <line x1="10" y1="-5" x2="20" y2="-15" stroke="#333" stroke-width="2" />
+        <rect x="-25" y="30" width="50" height="60" class="character-body-chacha" />
+        <rect x="-15" y="90" width="10" height="40" class="leg" />
+        <rect x="5" y="90" width="10" height="40" class="leg" />
         <rect x="-40" y="-70" width="80" height="30" rx="5" ry="5" class="speech-bubble-angry" />
         <text x="0" y="-50" class="angry-text-bubble" text-anchor="middle">"No way!"</text>
       </g>
       
       <g transform="translate(500, 180)">
-        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <path d="M-15,10 Q0,-5 15,10" class="angry-frown" />
         <line x1="-20" y1="-5" x2="-10" y2="-15" stroke="#333" stroke-width="2" />
         <line x1="10" y1="-5" x2="20" y2="-15" stroke="#333" stroke-width="2" />
+        <rect x="-25" y="30" width="50" height="70" class="character-body-skandourti" />
+        <rect x="-15" y="100" width="10" height="40" class="leg" />
+        <rect x="5" y="100" width="10" height="40" class="leg" />
         <rect x="-40" y="-70" width="80" height="30" rx="5" ry="5" class="speech-bubble-angry" />
         <text x="0" y="-50" class="angry-text-bubble" text-anchor="middle">"But..."</text>
       </g>
       
-      <line x1="370" y1="200" x2="430" y2="200" class="argument-line" />
-      <path class="heart" d="M400,200 Q390,180 370,200 Q390,220 400,200 Z" fill="#ff0000" />
-      <text x="400" y="350" class="scene-description" font-style="italic" fill="#777">A bump in the road...</text>
+      <path class="argument-heart" d="M400,200 C390,180 370,180 360,200 C350,220 390,260 400,280 C410,260 450,220 440,200 C430,180 410,180 400,200" transform="scale(0.5) translate(400, -100)"/>
     </svg>
     
     <h2>4. Our Forever: Happily Ever After</h2>
@@ -267,30 +284,32 @@
       <circle cx="700" cy="80" r="40" fill="#ffd700" />
       <ellipse cx="600" cy="50" rx="60" ry="30" class="cloud" />
       <ellipse cx="450" cy="70" rx="50" ry="25" class="cloud" />
-
+      
       <g transform="translate(550, 150)">
-        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <path d="M-30,30 Q0,50 30,30 L30,100 L-30,100 Z" class="wedding-outfit-chacha" />
         <path d="M-40,20 Q-20,-10 0,-20 Q20,-10 40,20 L30,30 L-30,30 Z" class="wedding-veil" transform="translate(0, -20)"/>
         <line x1="15" y1="50" x2="40" y2="80" stroke="#ffb6c1" stroke-width="4" />
-        <path d="M40,80 C50,70 50,90 40,100 L30,100 C20,90 20,70 30,60 Z" class="bouquet" />
-        <text x="-15" y="140" class="character-text">Chacha</text>
+        <rect x="-15" y="90" width="10" height="40" class="leg" />
+        <rect x="5" y="90" width="10" height="40" class="leg" />
+        <text x="-15" y="150" class="character-text">Chacha</text>
       </g>
       
       <g transform="translate(650, 150)">
-        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <circle cx="0" cy="0" r="30" class="character-head" />
+        <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <path d="M-15,10 Q0,25 15,10" class="happy-smile" />
         <rect x="-30" y="30" width="60" height="70" class="wedding-outfit-skandourti" />
         <rect x="-10" y="35" width="20" height="10" class="wedding-bow-tie" />
         <line x1="-30" y1="40" x2="-60" y2="80" stroke="#87ceeb" stroke-width="4" />
-        <line x1="30" y1="40" x2="60" y2="80" stroke="#87ceeb" stroke-width="4" />
-        <text x="-40" y="140" class="character-text">Skandourti</text>
+        <rect x="-15" y="100" width="10" height="40" class="leg" />
+        <rect x="5" y="100" width="10" height="40" class="leg" />
+        <text x="-40" y="160" class="character-text">Skandourti</text>
       </g>
       
-      <path class="heart" d="M600,100 Q580,50 550,100 T600,150 Z M600,100 Q620,50 650,100 T600,150 Z" transform="scale(1.5) translate(0, -20)"/>
+      <path class="heart" d="M600,100 C590,80 570,80 560,100 C550,120 590,160 600,180 C610,160 650,120 640,100 C630,80 610,80 600,100" transform="scale(1.5) translate(0, -20)"/>
     </svg>
 
     <p style="text-align: center; font-style: italic; color: #777; margin-top: 50px; font-size: 1.2em;">
@@ -299,4 +318,5 @@
   </div>
 </body>
 </html>
+
 
