@@ -49,15 +49,15 @@
     margin-top: 20px;
     width: 100%;
     height: auto;
-    max-height: 500px; /* Limit max height for very large screens */
+    max-height: 500px;
   }
 
   /* --- General Character & Object Styles --- */
   .character-head { fill: #ffdbac; stroke: #c19a6b; stroke-width: 1.5; }
-  .hair-chacha { fill: #a0522d; } /* Brown hair */
-  .hair-skandourti { fill: #5f4a4a; } /* Darker brown hair */
-  .character-body-chacha { fill: #ffb6c1; } /* Light pink */
-  .character-body-skandourti { fill: #87ceeb; } /* Sky blue */
+  .hair-chacha { fill: #a0522d; }
+  .hair-skandourti { fill: #5f4a4a; }
+  .character-body-chacha { fill: #ffb6c1; }
+  .character-body-skandourti { fill: #87ceeb; }
   .character-arm-leg { stroke-width: 4; stroke-linecap: round; }
   .happy-smile { stroke: #333; stroke-width: 1; fill: none; }
   .sad-frown { stroke: #333; stroke-width: 1; fill: none; }
@@ -68,8 +68,8 @@
   .speech-text { font-family: 'Comic Sans MS', cursive; font-size: 14px; fill: #333; }
 
   /* --- Scene 1: Long Distance --- */
-  .scene1-bg-left { fill: #a3e4d7; } /* Soft teal for Chacha's background */
-  .scene1-bg-right { fill: #d7bde2; } /* Soft lavender for Skandourti's background */
+  .scene1-bg-left { fill: #a3e4d7; }
+  .scene1-bg-right { fill: #d7bde2; }
   .connection-line { stroke: #ff69b4; stroke-dasharray: 5,5; stroke-width: 2; }
   .connection-heart { fill: #ff69b4; animation: pulse 1.5s infinite alternate; }
   .phone-line { stroke: #555; stroke-width: 1; }
@@ -78,17 +78,17 @@
   .tree-leaves { fill: #8bc34a; }
   .tree-trunk { fill: #795548; }
   .cloud { fill: #fff; opacity: 0.7; }
-  .star { fill: #ffd700; } /* Gold star */
+  .star { fill: #ffd700; }
 
   /* --- Scene 2: Reunion --- */
-  .scene2-bg { fill: #fffacd; } /* Pale yellow */
+  .scene2-bg { fill: #fffacd; }
   .hug-arms-chacha { stroke: #ffb6c1; stroke-width: 6; stroke-linecap: round; }
   .hug-arms-skandourti { stroke: #87ceeb; stroke-width: 6; stroke-linecap: round; }
   .text-overlay { font-size: 2em; font-weight: bold; fill: #5a5a5a; text-anchor: middle; }
   .sparkle { fill: #ffd700; animation: sparkle 1s infinite alternate; }
-
+  
   /* --- Scene 3: Conflict --- */
-  .scene3-bg { fill: #f8d7da; } /* Reddish background for tension */
+  .scene3-bg { fill: #f8d7da; }
   .lightning-bolt { fill: #ffcc00; animation: flash 0.5s infinite alternate; }
   .storm-cloud { fill: #a9a9a9; }
   .angry-text-bubble { font-family: 'Arial Black', sans-serif; font-size: 16px; fill: #ff0000; }
@@ -96,7 +96,7 @@
   .speech-bubble-angry { fill: #ffe0e0; stroke: #ff0000; stroke-width: 1; }
 
   /* --- Scene 4: Happily Ever After --- */
-  .scene4-bg { fill: #d4edda; } /* Green for growth and peace */
+  .scene4-bg { fill: #d4edda; }
   .house { fill: #f9e1db; stroke: #c47c6e; stroke-width: 2; }
   .house-roof { fill: #a0522d; stroke: #8b4513; stroke-width: 2; }
   .house-window { fill: #add8e6; }
@@ -110,12 +110,8 @@
   /* --- Animations --- */
   @keyframes pulse { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.1); opacity: 1; } }
   @keyframes flash { from { opacity: 0.7; } to { opacity: 1; } }
-  @keyframes sparkle {
-    0% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.5; transform: scale(1); }
-  }
-  
+  @keyframes sparkle { 0% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } 100% { opacity: 0.5; transform: scale(1); } }
+
 </style>
 </head>
 <body>
@@ -130,7 +126,7 @@
     <svg width="800" height="400" viewBox="0 0 800 400">
       <rect x="0" y="0" width="400" height="400" class="scene1-bg-left" />
       <rect x="400" y="0" width="400" height="400" class="scene1-bg-right" />
-
+      
       <rect x="30" y="250" width="80" height="100" class="building" />
       <rect x="45" y="270" width="20" height="30" class="window" />
       <rect x="75" y="270" width="20" height="30" class="window" />
@@ -139,7 +135,7 @@
       <ellipse cx="100" cy="50" rx="40" ry="20" class="cloud" />
       <circle cx="350" cy="30" r="8" class="star" />
       <circle cx="360" cy="50" r="5" class="star" />
-
+      
       <rect x="690" y="250" width="80" height="100" class="building" />
       <rect x="705" y="270" width="20" height="30" class="window" />
       <rect x="735" y="270" width="20" height="30" class="window" />
@@ -148,7 +144,7 @@
       <ellipse cx="700" cy="50" rx="40" ry="20" class="cloud" />
       <circle cx="450" cy="30" r="8" class="star" />
       <circle cx="440" cy="50" r="5" class="star" />
-
+      
       <line x1="300" y1="180" x2="500" y2="180" class="connection-line" />
       <path class="connection-heart" d="M390,180 Q380,160 360,180 T390,200 Z M390,180 Q400,160 420,180 T390,200 Z" transform="scale(0.8) translate(10,0)" />
       
@@ -174,7 +170,6 @@
         <rect x="-75" y="70" width="20" height="30" rx="3" ry="3" fill="#333" />
         <text x="-40" y="190" class="character-text">Skandourti</text>
       </g>
-
       <text x="400" y="30" class="text-overlay" font-size="1.5em" fill="#333">Connected by Love</text>
     </svg>
 
@@ -187,12 +182,6 @@
       <rect x="0" y="0" width="800" height="400" class="scene2-bg" />
       <text x="400" y="50" class="text-overlay">After 4 months...</text>
       
-      <circle cx="300" cy="150" r="5" class="sparkle" />
-      <circle cx="500" cy="140" r="7" class="sparkle" />
-      <circle cx="400" cy="100" r="6" class="sparkle" />
-      <circle cx="350" cy="250" r="8" class="sparkle" />
-      <circle cx="480" cy="260" r="6" class="sparkle" />
-
       <g transform="translate(350, 130)">
         <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="0" cy="0" r="30" class="character-head" />
@@ -217,7 +206,7 @@
       </g>
       
       <path class="heart" d="M400,210 Q380,160 350,210 T400,260 Z M400,210 Q420,160 450,210 T400,260 Z" transform="scale(1.2)" />
-
+      
       <text x="400" y="350" class="scene-description" font-style="italic">"Finally together!"</text>
     </svg>
 
@@ -233,7 +222,7 @@
       <path d="M150,100 L180,150 L160,150 L190,200 L160,200 L180,250" class="lightning-bolt" />
       <ellipse cx="600" cy="80" rx="100" ry="50" class="storm-cloud" />
       <path d="M650,100 L680,150 L660,150 L690,200 L660,200 L680,250" class="lightning-bolt" />
-
+      
       <g transform="translate(300, 180)">
         <ellipse cx="0" cy="-30" rx="25" ry="30" class="hair-chacha" />
         <circle cx="0" cy="0" r="30" class="character-head" />
@@ -243,6 +232,7 @@
         <rect x="-40" y="-70" width="80" height="30" rx="5" ry="5" class="speech-bubble-angry" />
         <text x="0" y="-50" class="angry-text-bubble" text-anchor="middle">"No way!"</text>
       </g>
+      
       <g transform="translate(500, 180)">
         <ellipse cx="0" cy="-30" rx="28" ry="32" class="hair-skandourti" />
         <circle cx="0" cy="0" r="30" class="character-head" />
@@ -274,7 +264,8 @@
         <circle cx="100" cy="220" r="5" fill="#f0e68c" />
         <text x="100" y="275" font-size="20" fill="#333" text-anchor="middle">Our Home Sweet Home</text>
       </g>
-      <circle cx="700" cy="80" r="40" fill="#ffd700" /> <ellipse cx="600" cy="50" rx="60" ry="30" class="cloud" />
+      <circle cx="700" cy="80" r="40" fill="#ffd700" />
+      <ellipse cx="600" cy="50" rx="60" ry="30" class="cloud" />
       <ellipse cx="450" cy="70" rx="50" ry="25" class="cloud" />
 
       <g transform="translate(550, 150)">
@@ -295,20 +286,15 @@
         <rect x="-30" y="30" width="60" height="70" class="wedding-outfit-skandourti" />
         <rect x="-10" y="35" width="20" height="10" class="wedding-bow-tie" />
         <line x1="-30" y1="40" x2="-60" y2="80" stroke="#87ceeb" stroke-width="4" />
-        <line x1="-15" y1="100" x2="-25" y2="160" class="character-arm-leg" stroke="#333" />
-        <line x1="15" y1="100" x2="25" y2="160" class="character-arm-leg" stroke="#333" />
+        <line x1="30" y1="40" x2="60" y2="80" stroke="#87ceeb" stroke-width="4" />
         <text x="-40" y="140" class="character-text">Skandourti</text>
       </g>
-
-      <circle cx="600" cy="180" r="5" fill="gold" stroke="#b8860b" stroke-width="1" />
-      <circle cx="605" cy="180" r="5" fill="gold" stroke="#b8860b" stroke-width="1" />
-      <polygon points="602,175 607,175 604,170" class="ring-diamond" />
-      <text x="600" y="220" class="text-overlay" font-size="1.5em" fill="#ff69b4">I DO!</text>
+      
       <path class="heart" d="M600,100 Q580,50 550,100 T600,150 Z M600,100 Q620,50 650,100 T600,150 Z" transform="scale(1.5) translate(0, -20)"/>
     </svg>
 
     <p style="text-align: center; font-style: italic; color: #777; margin-top: 50px; font-size: 1.2em;">
-      This is for you, my love, a story written in code, just like our lives are written in our hearts. Every line, every color, a reflection of our journey. Happy Anniversary! (or happy regular day, or just because I love you!)
+      This is for you, my love. A little story coded to show how much I miss you. It's a reminder of our journey together and all the moments still to come. Can't wait to see you again.
     </p>
   </div>
 </body>
